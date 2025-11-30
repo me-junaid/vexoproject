@@ -1,0 +1,125 @@
+---
+import { Image } from "astro:assets";
+
+
+// Define the link data structures to keep the HTML clean
+const services = [
+  "Business Cards",
+  "Brochures & Flyers",
+  "Packaging Design",
+  "Banners & Signage",
+  "Posters & Prints",
+];
+
+const company = [
+  "About Us",
+  "Portfolio",
+  "Testimonials",
+  "Careers",
+  "Contact",
+];
+
+const resources = [
+  "Blog",
+  "Design Tips",
+  "Print Guides",
+  "FAQs",
+  "Support",
+];
+
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="bg-[#0F3231] text-[#C8AA68] font-sans pt-16 pb-8">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    
+    <!-- Top Section: Grid Layout -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 mb-16">
+      
+      <!-- Brand Column (Left) -->
+      <div class="lg:col-span-4 flex flex-col items-start gap-6">
+        <!-- Logo Area -->
+        <div class="group">
+          <img src="/logo.png" class="h-[60px]"/>
+          <p class="text-xs tracking-wide opacity-80 pl-1">Printing with Passion and Precision</p>
+        </div>
+
+        <!-- Social Icons -->
+        <div class="flex gap-4 mt-2">
+          {['facebook', 'instagram', 'twitter', 'telegram', 'linkedin'].map((social) => (
+            <a href="#" aria-label={social} class="h-10 w-10 border border-[#C8AA68] rounded-full flex items-center justify-center hover:bg-[#C8AA68] hover:text-[#0F3231] transition-colors duration-300">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                {social === 'facebook' && <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>}
+                {social === 'instagram' && <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>}
+                {social === 'instagram' && <rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke="currentColor" stroke-width="2" fill="none"></rect>}
+                {social === 'twitter' && <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>}
+                {social === 'telegram' && <path d="M21.928 2.62c-1.157-.393-2.923.167-7.73 2.14-16.184 6.643-16.48 6.55-16.108 8.01.528 2.07 3.96 2.65 3.96 2.65s1.25.37 3.32-1.12c5.68-4.11 6.55-4.72 7.22-4.52.48.14-.54 2.37-3.12 4.77-1.78 1.66-1.57 2.67.62 4.11 3.29 2.16 4.72 1.37 5.75-.46 2.5-4.45 4.88-14.28 6.09-15.58z"></path>}
+                {social === 'linkedin' && <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>}
+                {social === 'linkedin' && <circle cx="4" cy="4" r="2"></circle>}
+              </svg>
+            </a>
+          ))}
+        </div>
+      </div>
+
+      <!-- Links Columns (Right) -->
+      <div class="lg:col-span-8 grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-4 lg:pl-12">
+        
+        <!-- Services Column -->
+        <div>
+          <h3 class="text-xl font-semibold mb-6">Services</h3>
+          <ul class="space-y-4">
+            {services.map((item) => (
+              <li>
+                <a href="#" class="text-white hover:text-[#c79940] transition-colors duration-200">{item}</a>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <!-- Company Column -->
+        <div>
+          <h3 class="text-xl font-semibold mb-6">Company</h3>
+          <ul class="space-y-4">
+            {company.map((item) => (
+              <li>
+                <a href="#" class="text-white hover:text-[#c79940] transition-colors duration-200">{item}</a>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <!-- Resources Column -->
+        <div>
+          <h3 class="text-xl font-semibold mb-6">Resources</h3>
+          <ul class="space-y-4">
+            {resources.map((item) => (
+              <li>
+                <a href="#" class="text-white hover:text-[#c79940] transition-colors duration-200">{item}</a>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Divider -->
+    <div class="border-t border-[#C8AA68]/30 my-8"></div>
+
+    <!-- Bottom Section -->
+    <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-sm font-light opacity-90">
+      <div>
+        &copy; {currentYear} VexoPrints All rights reserved.
+      </div>
+      <div class="flex gap-8">
+        <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+        <span class="opacity-50">|</span>
+        <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+        <span class="opacity-50">|</span>
+        <a href="#" class="hover:text-white transition-colors">Cookie Policy</a>
+      </div>
+    </div>
+
+  </div>
+</footer>

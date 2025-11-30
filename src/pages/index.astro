@@ -1,5 +1,14 @@
 ---
-
+import Header from "../components/Header.astro"
+import Footer from "../components/Footer.astro"
+import HeroSection from "../components/HomePage/HeroSection.astro"
+import Portfolio from "../components/HomePage/Portfolio.astro"
+import Products from "../components/HomePage/Products.astro"
+import AboutFeatures from "../components/HomePage/AboutFeatures.astro"
+import OurProcess from "../components/HomePage/OurProcess.astro"
+import "../styles/style.css"
+import Testmonials from "../components/HomePage/Testmonials.astro"
+import Contact from "../components/HomePage/Contact.astro"
 ---
 
 <html lang="en">
@@ -11,6 +20,14 @@
 		<title>Astro</title>
 	</head>
 	<body>
-		<h1>Astro</h1>
+		<Header/>
+		<HeroSection/>
+		<Products/>
+		<Portfolio/>
+		<AboutFeatures/>
+		<OurProcess/>
+		<Testmonials/>
+		<Contact/>
+		<Footer/>
 	</body>
 </html>

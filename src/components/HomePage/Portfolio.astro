@@ -1,0 +1,44 @@
+---
+const items = [
+  "First Images",
+  "Second Images",
+  "Third Images",
+  "Forth Images",
+  "Fifth Images",
+  "Sixth Images",
+  "Seventh Images",
+  "Eighth Images",
+  "Ninth Images",
+  "Tenth Images",
+  "First Images",
+  "Second Images",
+  "Third Images",
+  "Forth Images",
+  "Fifth Images",
+  "Sixth Images",
+  "Seventh Images",
+  "Eighth Images",
+  "Ninth Images",
+  "Tenth Images",
+];
+---
+
+<section class="bg-[#c79940]">
+  <div class="justify-center items-center flex p-3 flex-col">
+    <h2
+      class="text-center text-white bg-[#093830] px-9 py-1 rounded-full font-semibold text-2xl"
+    >
+      Oru Works
+    </h2>
+    <h3 class="text-4xl font-bold">
+      Portfolio Showcase
+    </h3>
+    <p class="text-lg font-medium mt-1">
+      Explore our latest projects and see the quality we deliver.
+    </p>
+  </div>
+
+  <div class="flex gap-3 p-3 overflow-x-scroll hide-scrollbar">
+    {items.map((item) => <div class="h-[300px] bg-[#093830] w-[300px] shrink-0 flex items-center justify-center text-white">{item}</div>)}
+  </div>
+</section>

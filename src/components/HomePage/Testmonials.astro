@@ -1,0 +1,41 @@
+---
+const items = ["First Brand", "Second Brand", "Thrid Brand", "Forth Brand","Fifth Brand"];
+const item2 = ["First", "Second", "Thrid"];
+---
+
+<section>
+  <div class="justify-center items-center flex p-3 pb-0 flex-col">
+    <h2
+      class="text-center text-white bg-[#093830] px-9 py-1 rounded-full font-semibold text-2xl"
+    >
+      Brands We Serve
+    </h2>
+  </div>
+
+  <div class="flex gap-3 p-7 overflow-x-scroll hide-scrollbar">
+    {
+      items.map((item) => (
+        <div class="bg-[#093830] p-8 grow text-[#c79940] rounded-2xl">
+          <h2 class="text-center font-semibold text-4xl ">{item}</h2>
+        </div>
+      ))
+    }
+  </div>
+  <div class="justify-center items-center flex p-3 pb-0 flex-col">
+    <h2
+      class="text-center text-white bg-[#093830] px-9 py-1 rounded-full font-semibold text-2xl"
+    >
+      Customer Testmonials
+    </h2>
+  </div>
+
+  <div class="flex gap-3 p-7 overflow-x-scroll hide-scrollbar">
+    {
+      item2.map((item) => (
+        <div class="bg-[#093830] p-8 py-14 grow text-[#c79940] rounded-2xl">
+          <h2 class="text-center font-semibold text-4xl ">{item}</h2>
+        </div>
+      ))
+    }
+  </div>
+</section>
